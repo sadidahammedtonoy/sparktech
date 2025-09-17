@@ -10,7 +10,7 @@ class CustomThemeApp {
         ),
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
-          fillColor: Colors.white.withOpacity(0.3),
+          fillColor: Color(0xFFF7FFEF).withOpacity(0.3),
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
               color: Colors.grey.withOpacity(0.3),
