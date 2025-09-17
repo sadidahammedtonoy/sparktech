@@ -26,7 +26,7 @@ class login_page extends StatelessWidget {
             )),
             SizedBox(height: 10.h,),
             Text("Password", style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w500),),
-            SizedBox(height: 50, child: Obx(() => TextFormField(obscureText: controller.isPasswordVisiable.value,
+            SizedBox(height: 50, child: Obx(() => TextFormField(obscureText: !controller.isPasswordVisiable.value,
               controller: controller.password,
               decoration: InputDecoration(
                   suffixIcon: IconButton(onPressed: () => controller.isPasswordVisiable.value = !controller.isPasswordVisiable.value, icon: Icon(controller.isPasswordVisiable.value ? Icons.visibility_off_outlined : Icons.visibility_outlined, color: Colors.grey,))
@@ -42,6 +42,9 @@ class login_page extends StatelessWidget {
                         }),
                 ),
                 Text("Remember me", style: TextStyle(fontSize: 14.sp),),
+                Spacer(),
+                TextButton(onPressed: () => controller.forgetpassword(), child: Text("Forget password", style: TextStyle(fontSize: 14.sp),),)
+
               ],
             ),
             Row(
