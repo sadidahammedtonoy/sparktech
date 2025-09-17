@@ -15,17 +15,8 @@ class splash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: back_button(),
-        title: Text("splash"),
-        centerTitle: true,
-      ),
-      body: Column(
-        children: [
-          Expanded(
-            child: Text("dskjcbksdbcsjk"),
-          ),
-        ],
+      body: Center(
+        child: SvgPicture.asset(assets.splash),
       ),
     );
   }

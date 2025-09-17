@@ -3,15 +3,17 @@ import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../App/appColors.dart';
 import '../../../../../App/assets.dart';
-class onBording extends StatelessWidget {
-  const onBording({super.key});
+import 'package:get/get.dart';
 
+import '../Controller/controller.dart';
+class onBording extends StatelessWidget {
+  onBording({super.key});
+  final controller = Get.put(onbording_controller());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(child: OnBoardingSlider(
         headerBackgroundColor: Colors.white,
-
         finishButtonText: 'Finished',
         finishButtonStyle: FinishButtonStyle(
           backgroundColor: appcolors.primary,
@@ -26,6 +28,7 @@ class onBording extends StatelessWidget {
         ],
         totalPage: 3,
         speed: 1.8,
+        onFinish: () => controller.finised(),
         pageBodies: [
           Container(
             padding: EdgeInsets.symmetric(horizontal: 40),

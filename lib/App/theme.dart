@@ -7,7 +7,6 @@ class CustomThemeApp {
         scaffoldBackgroundColor: appcolors.appBackground,
         appBarTheme: AppBarTheme(backgroundColor: appcolors.appBackground,
         scrolledUnderElevation: 0,
-
         ),
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
